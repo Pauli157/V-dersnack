@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VäderSnack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Cozy weather + warm conversation</p>
+        <h1>VäderSnack</h1>
+        <p class="subhead">A snug, shareable weather receipt with conversation starters. All values are placeholders for now.</p>
+        <button class="btn primary" type="button" id="use-location">Use my location</button>
+        <p class="debug-line" id="location-debug">Using: lat --, lon -- (not set)</p>
+      </div>
+      <div class="hero-card" aria-hidden="true">
+        <div class="steam"></div>
+        <div class="cup"></div>
+        <p>Blanket forecast</p>
+        <span>Today, 10:00</span>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="receipt" aria-label="Weather Receipt">
+        <div class="receipt-header">
+          <div>
+            <h2>Weather Receipt</h2>
+            <p>All cozy placeholders until we plug in real weather.</p>
+          </div>
+          <button class="btn ghost" type="button" id="copy-share">Copy share link</button>
+        </div>
+        <div class="receipt-card">
+          <div class="receipt-row">
+            <span>Temp now</span>
+            <strong id="temp-now">18°C</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Yesterday same hour</span>
+            <strong id="temp-yesterday">16°C</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Δ vs yesterday</span>
+            <strong id="temp-delta">+2°C</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Wind</span>
+            <strong id="wind-now">7 m/s · NW</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Rain chance</span>
+            <strong id="rain-now">25%</strong>
+          </div>
+          <div class="receipt-row">
+            <span>Summary</span>
+            <strong id="summary">Soft clouds, sweater vibes</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="icebreakers" aria-label="3 Icebreakers">
+        <div class="section-head">
+          <div>
+            <h2>3 Icebreakers</h2>
+            <p>Three ways to keep the warmth going.</p>
+          </div>
+          <button class="btn secondary" type="button" id="regen-icebreakers">Regenerate icebreakers</button>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="tag">Say</span>
+            <h3 id="say-text">"This weather feels like a warm latte."</h3>
+            <p id="say-sub">Placeholder line to set a cozy, friendly tone.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Ask</span>
+            <h3 id="ask-text">"What’s your favorite rainy-day ritual?"</h3>
+            <p id="ask-sub">Placeholder question to invite a story.</p>
+          </article>
+          <article class="card">
+            <span class="tag">Twist</span>
+            <h3 id="twist-text">"If this breeze were a song, what would it be?"</h3>
+            <p id="twist-sub">Placeholder twist to make it playful.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite">Link copied!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
